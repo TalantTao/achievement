@@ -9,5 +9,32 @@
 </head>
 <body>
   <h3>查询成绩</h3>
+  <!-- <script id="getAchievement" src="https://static-5d484106-9273-476b-ad0f-432acc9930da.bspapp.com/static/getAchievement.json">
+  </script> -->
+  <script>
+    let response = fetch('https://static-5d484106-9273-476b-ad0f-432acc9930da.bspapp.com/static/getAchievement.json');
+    response.then(async res => {
+      console.log(res);
+      let json = await res.json();
+      console.log('json :>> ', json);
+    })
+  </script>
+  <script>
+    let response2 = fetch('https://5d484106-9273-476b-ad0f-432acc9930da.bspapp.com/http/getAchievement');
+    response2.then(async res => {
+      console.log(2, res);
+      let json = await res.json();
+      console.log('json2  :>> ', json);
+    })
+  </script>
+  <script>
+    let response3 = fetch('https://039e3702-5241-40fb-af35-5fd176a31e64.bspapp.com/http/getAllCategories');
+    response3.then(async res => {
+      console.log(3, res);
+      let json = await res.json();
+      console.log('json3  :>> ', json);
+    })
+  </script>
+  <script src="./index.js"></script>
 </body>
 </html>
